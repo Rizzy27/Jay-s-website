@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Unique Walls</title>
+    <link rel="stylesheet" href="style.css">
+  <style>
+      body{
+
+      background-color:rgb(31, 47, 190);
+      background-blend-mode:color;
+      }
+    </style>
+    <script>
+var slideIndex = 1;
+showSlides(slideIndex);
+
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("dot");
+  if (n > slides.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";
+  }
+  for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";
+  dots[slideIndex-1].className += " active";
+}
+</script>
+
+</head>
+
+    <body>
+      <center>
+        <nav>
+          <img src="Images/Logo.png" alt="uniquewalls" style="width:50px;height:50px">
+          <ul class="nav__links">
+            <li><a href="Index.html">HOME</a></li>
+            <li><a href="Store.html">STORE</a></li>
+            <li><a href="Contact Us.html">CONTACT US</a></li>
+          </ul>
+       </center>
+
+
+       <div class="slideshow-container">
+
+<div class="mySlides fade">
+  <div class="numbertext">1 / 3</div>
+  <img src="Images/Boxes/20180403151236_300x300.jpg" style="width:100%">
+  <div class="text">Supreme</div>
+</div>
+
+<div class="mySlides fade">
+  <div class="numbertext">2 / 3</div>
+  <img src="Images/Boxes/20181208-163505_300x300.jpg" style="width:100%">
+  <div class="text">Nike Box</div>
+</div>
+
+<div class="mySlides fade">
+  <div class="numbertext">3 / 3</div>
+  <img src="Images/Boxes/20180119_165832_300x300.jpg" style="width:100%">
+  <div class="text">Adidas Box</div>
+</div>
+
+<a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+<a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+</div>
+<br>
+
+<div style="text-align:center">
+  <span class="dot" onclick="currentSlide(1)"></span>
+  <span class="dot" onclick="currentSlide(2)"></span>
+  <span class="dot" onclick="currentSlide(3)"></span>
+</div>
+
+<center>
+<a href="Store.html"><button>BUY NOW!</button></a>
+</center>
+
+<footer>
+  <p>Unique Walls, Copyright &copy; 2021</p>
+  <center><a target="_blank" href="https://www.facebook.com/pg/uniquewallsuk/"><img src="Images/facebook.png" alt="facebook" style="width:32px;height:32px"></a><a target="_blank" href="https://www.instagram.com/unique_walls/"><img src="Images/instagram.png" alt="instagram" style="width:32px;height:32px"></a><a target="_blank" href="https://twitter.com/JayUniquewalls"><img src="images/twitter.png" alt="twitter" style="width:32px;height:32px"></a></center>
+</footer>
+</body>
+</html>
